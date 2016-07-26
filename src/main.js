@@ -326,9 +326,9 @@ Main.prototype.init = function(){
 Main.prototype.displayPanels = function(on){
 	if(on){
 		$("#youtubePanel").css("display", "");
-		$("#photoPanel").css("display", "");
+		$("#photoPanel").css("display", "none");
 		$("#wikiPanel").css("display", "");
-		$("#gamenetPanel").css("display", "");
+		$("#gamenetPanel").css("display", "none");
 	} else {
 		$("#youtubePanel").css("display", "none");
 		$("#photoPanel").css("display", "none");
@@ -720,18 +720,18 @@ Main.prototype.readGames = function(gameFile){
 									"<center><img class='img-responsive' src='media/youtube_logo.jpg' style='position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 95%;'></center>" +
 							"</div>"
 							);
-	$("#paneHolder").append("<div id='photoPanel' class='panel panel-default' style='top: "+(that.height/2-paneWidth/2+paneDelta)+"; left: "+(that.width/2-paneWidth/2-paneDelta)+"; width: "+paneWidth+"; height: "+paneWidth+"; position: absolute;'>" +
-									"<center><img class='img-responsive' src='media/Camera_icon.gif' style='position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 95%;'></center>" +
-							"</div>"
-							);
+	//$("#paneHolder").append("<div id='photoPanel' class='panel panel-default' style='top: "+(that.height/2-paneWidth/2+paneDelta)+"; left: "+(that.width/2-paneWidth/2-paneDelta)+"; width: "+paneWidth+"; height: "+paneWidth+"; position: absolute;'>" +
+									//"<center><img class='img-responsive' src='media/Camera_icon.gif' style='position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 95%;'></center>" +
+							//"</div>"
+							//);
 	$("#paneHolder").append("<div id='wikiPanel' class='panel panel-default' style='top: "+(that.height/2-paneWidth/2-paneDelta)+"; left: "+(that.width/2-paneWidth/2+paneDelta)+"; width: "+paneWidth+"; height: "+paneWidth+"; position: absolute;'>" +
 									"<center><img class='img-responsive' src='media/Wikipedia-W.png' style='position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 95%;'></center>" +
 							"</div>"
 							);
-	$("#paneHolder").append("<div id='gamenetPanel' class='panel panel-default' style='background-color: #ff5500;top: "+(that.height/2-paneWidth/2+paneDelta)+"; left: "+(that.width/2-paneWidth/2+paneDelta)+"; width: "+paneWidth+"; height: "+paneWidth+"; position: absolute;'>" +
-									"<center><img class='img-responsive' src='media/gamenet.png' style='position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 95%;'></center>" +
-							"</div>"
-							);
+	//$("#paneHolder").append("<div id='gamenetPanel' class='panel panel-default' style='background-color: #ff5500;top: "+(that.height/2-paneWidth/2+paneDelta)+"; left: "+(that.width/2-paneWidth/2+paneDelta)+"; width: "+paneWidth+"; height: "+paneWidth+"; position: absolute;'>" +
+									//"<center><img class='img-responsive' src='media/gamenet.png' style='position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 95%;'></center>" +
+							//"</div>"
+							//);
 
 	this.selectedModel = new THREE.Sprite( new THREE.SpriteMaterial({color: 0x3176B2, map: that.circleSprite}));
 	this.selectedModel.scale.copy(new THREE.Vector3(100, 100, 100));

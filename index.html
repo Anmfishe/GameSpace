@@ -67,12 +67,14 @@
 				<el class="navbar-text" style="position:absolute; font-size: 20px; margin-top: 10px; text-align: center; left: 0; right: 0; width: 300px; margin: auto; margin-top: 10px;"><b>Ontological Game Space</b></el>
 
 				<form class="navbar-form navbar-right" >
-					<div class="searcher "><center>
+					<div class="searcher ">
 					    <input id="tags" type="text" placeholder="  Search" name="code" ,="" style=" width: 350px; height: 34px; border: 0; text-align:center; background: #EEEEEE; " class="ui-autocomplete-input" autocomplete="off">
 
 					    <script>
 					    $("input.submit").click(function(e){
-					        $.post( "/save", {name: $("input.name").val(), time: "2pm"});
+					        $.post({name: $("input.name").val()});
+							//$("#tags").autocomplete('toggle');
+							$(".ui-menu-item").hide();
 					    });
 					    </script>
 					</div>
@@ -155,7 +157,7 @@
 						}
 						game.isAnimating = true;
 						game.displayPanels(false);
-						that.selectedModel.visible = false;
+						$(".ui-menu-item").hide();
 						$("#gameTitleP").attr("style", "display: none;");
                     }
 		        });
