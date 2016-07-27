@@ -167,8 +167,8 @@ Main.prototype.init = function(){
 		if(that.closedModal && !that.isAnimating){
 			if(e.which == "1"){
 				if(that.mousePos.distanceTo(that.selectionLoc) < 5 && that.mousePos.y > 50 
-					&& (  that.selected == null || ((that.mousePos.y < that.height/2 - that.paneWidth/2 - that.paneDelta) || (that.mousePos.x < that.width/2 - that.paneWidth/2 - that.paneDelta) 
-					|| (that.mousePos.y > that.height/2 + that.paneWidth/2 + that.paneDelta) || (that.mousePos.x > that.width/2 + that.paneWidth/2 + that.paneDelta) ) ) ){
+					&& (  that.selected == null || ((that.mousePos.y < that.height/2 - that.paneWidth/2 - that.paneDelta) || (that.mousePos.x < that.width/2 - that.paneWidth/2 - that.paneDelta)
+					|| (that.mousePos.y > that.height/2 - that.paneWidth/2 + that.paneDelta) || (that.mousePos.x > that.width/2 + that.paneWidth/2 + that.paneDelta) ) ) ){
 					that.rayVector.set((that.mousePos.x/window.innerWidth) * 2 - 1, -(that.mousePos.y/window.innerHeight) * 2 + 1, 0.5).unproject(that.camera);
 					that.rayVector.sub(that.camera.position).normalize();
 
